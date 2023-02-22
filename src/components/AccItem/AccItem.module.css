@@ -1,0 +1,213 @@
+.item {
+    height: 682px;
+    box-sizing: border-box;
+    width: 85px;
+    color: var(--white);
+    padding: 20px 18px 25px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 40px 0;
+    position: relative;
+    transition: background 1s linear;
+    cursor: pointer;
+}
+
+.itemActive {
+    background: linear-gradient(to right, var(--main), var(--main)) !important;
+    transition: background 1s linear;
+}
+
+.border {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--red);
+    box-shadow: 0 0 10px #FF1E00;
+}
+
+.title {
+    margin: 0;
+    font-family: 'SF PRO Display', sans-serif;
+    transform: rotateZ(180deg);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+}
+
+.id {
+    margin: 0;
+    font-family: 'SF Pro Display', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+}
+
+.content {
+    width: 0;
+    visibility: hidden;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    position: relative;
+    overflow: hidden;
+}
+
+.inner {
+    box-sizing: border-box;
+    z-index: 0;
+    font-family: "SF PRO Display", sans-serif;
+    position: absolute;
+    left: 0;
+    width: 364px;
+    color: var(--white);
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(20px);
+    height: 100%;
+    padding: 0 66px 50px 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.contentActive {
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    width: 100%;
+    visibility: visible;
+}
+
+.innerId {
+    position: absolute;
+    top: -11%;
+    left: -40%;
+    margin: 0;
+    font-weight: 600;
+    font-size: 380px;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.innerTitle {
+    margin: 0 0 12px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.innerDate {
+    margin: 0 0 25px;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--gray);
+}
+
+.innerButton {
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--gray);
+    max-width: 256px;
+    border: 2px solid var(--gray);
+    text-align: center;
+    border-left-width: 7px;
+    padding: 20px 5px;
+    text-decoration: none;
+}
+
+@media(max-width: 1300px) {
+    .item {
+        width: 100%;
+        height: 85px;
+        flex-direction: row-reverse;
+        justify-content: start;
+        gap: 0 32px;
+        padding-left: 40px;
+    }
+    .title {
+        writing-mode: rl-tb;
+        transform: rotateZ(0);
+    }
+    .border {
+        left: 0;
+    }
+    .content {
+        width: 100%;
+        height: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .contentActive {
+        height: 460px;
+    }
+    .inner {
+        height: 190px;
+        width: 100%;
+        bottom: 0;
+        padding: 25px 40px 40px;
+        justify-content: start;
+    }
+    .innerButton {
+        padding: 12px 18px;
+        max-width: 169px;
+        font-size: 16px;
+    }
+    .innerId {
+        font-size: 152px;
+        top: -25px;
+        left: auto;
+        right: -30px;
+    }
+}
+
+@media(max-width: 768px) {
+    .content {
+        background-position: center;
+        background-size: unset;
+    }
+    .wrapper {
+        padding-top: 45px;
+        padding-bottom: 48px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .innerTitle {
+        font-size: 18px;
+    }
+    .innerDate {
+        font-size: 16px;
+    }
+    .id {
+        font-size: 32px;
+    }
+}
+
+@media(max-width: 360px) {
+    .contentActive {
+        height: 376px;
+    }
+    .item {
+        height: 64px;
+        padding: 20px;
+    }
+    .inner {
+        height: 158px;
+    }
+    .innerTitle {
+        font-size: 16px;
+    }
+    .innerDate {
+        font-size: 14px;
+    }
+    .innerId {
+        font-size: 80px;
+        top: -5px;
+        right: -15px;
+    }
+}

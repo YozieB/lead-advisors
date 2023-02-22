@@ -1,0 +1,73 @@
+.countdown {
+    margin: 32px 0 128px;
+    display: flex;
+    justify-content: center;
+    gap: 0 25px;
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    padding: 0;
+    margin: 0;
+    color: var(--main);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 100%;
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    background-image: url("../../images/text.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white);
+    height: 54px;
+    width: 132px;
+    bottom: -44px;
+}
+
+.item:nth-child(odd) {
+    min-width: 95px;
+    display: flex;
+    justify-content: center;
+}
+
+.sm {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .lg {
+        display: none;
+    }
+    .sm {
+        display: block;
+    }
+    .item {
+        font-size: 36px;
+    }
+    .countdown {
+        margin-top: 40px;
+        margin-bottom: 80px;
+        gap: 0;
+    }
+    .text {
+        width: 64px;
+        height: 40px;
+        font-size: 12px;
+        bottom: -40px;
+    }
+    .item:nth-child(odd) {
+        min-width: 80px;
+    }
+}

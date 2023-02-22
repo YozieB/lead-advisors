@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: center;
+    transform: translateY(0);
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.headerInit {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+@media(max-width: 450px) {
+    .image {
+        max-width: 128px;
+    }
+}

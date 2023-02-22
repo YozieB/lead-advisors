@@ -1,0 +1,10 @@
+.init {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+.loaded {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: .5s ease;
+}
