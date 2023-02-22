@@ -75,6 +75,8 @@
 
 .bigButton {
     margin: 0 auto;
+    outline: none;
+    border: none;
     font-weight: 400;
     font-size: 18px;
     max-width: 200px;
